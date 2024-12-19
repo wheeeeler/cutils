@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0",
+  "compatibilityLevel": "JAVA_8",
+  "package": "net.wheel.cutils.impl.mixin",
+  "mixins": [
+    "spoof.MixinModlistSpoofer",
+    "render.MixinEntityRenderer",
+    "cancel.MixinSoundManager",
+    "render.MixinTileEntityRendererDispatcher",
+    "cancel.MixinPlayerControllerMP",
+    "cancel.MixinSPacketUpdateTileEntity",
+    "cancel.MixinEntityItem"
+  ],
+  "client": [],
+  "server": []
+}

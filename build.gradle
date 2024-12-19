@@ -1,0 +1,155 @@
+buildscript {
+    repositories {
+        mavenCentral()
+
+        maven {
+            url = "https://files.minecraftforge.net/maven"
+        }
+
+        maven {
+            url = "https://plugins.gradle.org/m2/"
+        }
+        maven {
+            url = 'https://repo.spongepowered.org/maven'
+        }
+    }
+
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.3'
+        classpath 'org.spongepowered:mixin:0.8.3'
+        classpath 'com.diffplug.spotless:spotless-plugin-gradle:4.5.1'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.19'
+    }
+}
+
+apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: "com.github.johnrengelman.shadow"
+apply plugin: "com.diffplug.gradle.spotless"
+
+
+version = "3.4p"
+group = "net.wheel"
+archivesBaseName = "cutils"
+def buildmode = "RELEASE"
+
+sourceCompatibility = targetCompatibility = '1.8'
+compileJava {
+    sourceCompatibility = targetCompatibility = '1.8'
+}
+
+spotless {
+    java {
+        endWithNewline()
+        indentWithTabs()
+        removeUnusedImports()
+        eclipse().configFile('cf/cf.xml')
+        importOrderFile('cf/cu.importorder')
+    }
+}
+
+idea {
+    module {
+        inheritOutputDirs = false
+        outputDir = compileJava.destinationDir
+        testOutputDir = compileTestJava.destinationDir
+    }
+}
+
+minecraft {
+    version = "1.12.2-14.23.5.2847" // FUCK the 2860, 2847 SEARGE ON TOP
+    runDir = "run"
+    mappings = "stable_39"
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    compile group: 'org.spongepowered', name: 'mixin', version: '0.8.3'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compile group: 'org.json', name: 'json', version: '20210307'
+    implementation 'org.java-websocket:Java-WebSocket:1.5.2'
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    runtimeOnly 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+
+reobf {
+    jar {
+        mappingType = 'SEARGE'
+    }
+
+    shadowJar {
+        mappingType = 'SEARGE'
+        classpath = sourceSets.main.compileClasspath
+    }
+}
+
+jar {
+    manifest {
+        attributes 'FMLCorePlugin': 'net.wheel.cutils.impl.fml.core.CutilsLoadingPlugin'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+        attributes 'FMLAT': 'cutils_at.cfg'
+        attributes 'ForceLoadAsMod': 'true'
+        attributes "MixinConfigs": "mixins.cutils.json"
+        attributes "ModSide": "CLIENT"
+        attributes "TweakClass": "org.spongepowered.asm.launch.MixinTweaker"
+        attributes "TweakOrder": "0"
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+shadowJar {
+    dependencies {
+        include(dependency('com.googlecode.json-simple:json-simple:1.1.1'))
+        include(dependency('org.json:json:20210307'))
+        include(dependency('net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'))
+        include(dependency('org.slf4j:slf4j-api:1.7.36'))
+        include(dependency('org.slf4j:slf4j-simple:1.7.36'))
+        include(dependency('org.java-websocket:Java-WebSocket:1.5.2'))
+        include(dependency('org.spongepowered:mixin:0.8.3'))
+    }
+
+    manifest {
+
+        attributes 'FMLCorePlugin': 'net.wheel.cutils.impl.fml.core.CutilsLoadingPlugin'
+        attributes 'FMLCorePluginContainsFMLMod': 'true'
+        attributes 'FMLAT': 'cutils_at.cfg'
+    }
+
+    exclude 'dummyThing'
+    exclude 'LICENSE.txt'
+    classifier = 'C'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+        expand 'version': project.version, 'mcversion': project.minecraft.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+        exclude 'assets/cutils/shaders/chams.frag'
+    }
+}
+
+build.dependsOn {
+    [       'spotlessApply',
+            'shadowJar',
+            'reobfShadowJar'
+    ]
+}
+
+if (buildmode == "RELEASE") {
+    sourceSets {
+        main(({
+            output.resourcesDir = output.classesDir
+        }))
+    }
+}

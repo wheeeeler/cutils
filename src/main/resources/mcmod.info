@@ -1,0 +1,16 @@
+[
+{
+  "modid": "cutils",
+  "name": "crackutils",
+  "description": "unfair and unbalanced 'utility' mod :--)",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["wheeler, Sername"],
+  "credits": "Takeda Pharmaceuticals",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

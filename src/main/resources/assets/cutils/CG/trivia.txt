@@ -1,0 +1,283 @@
+1:
+question: What is the first name of the original creator of Minecraft?
+answers:
+"markus"
+2:
+question: What was the second mob ever added to the game?
+answers:
+"skeleton"
+
+3:
+question: How many iron ingots do you need to craft an anvil?
+answers:
+"31"
+
+4:
+question: How many iron ingots do you need to craft an Iron Golem?
+answers:
+"36"
+
+5:
+question: How many mobs spawn in the nether dimension? (as of 1.16.4)
+answers:
+"eleven"
+
+6:
+question: What mob are creepers scared of?
+answers:
+"ocelot"
+
+7:
+question: When do creepers drop music dics?
+answers:
+"when a skeleton kills them"
+
+8:
+question: What update improved oceans and added new sea life?
+answers:
+"aquatic"
+
+9:
+question: Diamonds spawn at Y level [ ? ] and below
+answers:
+"sixteen"
+
+10:
+question: How many ore types are in the game as of 1.16.4?
+answers:
+"eleven"
+
+11:
+question: What's the only mob that spawns naturally in all dimensions?
+answers:
+"endermen"
+
+12:
+question: What programming language is Minecraft written in?
+answers:
+"java"
+
+13:
+question: What year was Minecraft released in?
+answers:
+"2011"
+
+14:
+question: Roughly how many minutes does it take for any baby mobs to grow up?
+answers:
+"twenty"
+
+15:
+question: What drops from beehives when you shear them?
+answers:
+"honeycomb"
+
+16:
+question: What's the name of the update that added bees to the game?
+answers:
+"buzzy bees"
+
+17:
+question: Which update was ''The Combat Update''?
+answers:
+"1.9"
+
+18:
+question: True or False: Chests automatically change their texture to represent a present on Christmas
+answers:
+"true"
+
+19:
+question: A full day-night cycle lasts for [ ? ] minutes
+answers:
+"20"
+
+20:
+question: What biome do foxes spawn in?
+answers:
+"taiga"
+
+21:
+question: What is the only mob that can (sometimes) break obsidian?
+answers:
+"wither"
+
+22:
+question: Excluding crafting, how many slots are in your survival inventory? (as of 1.16.4)
+answers:
+"41"
+
+23:
+question: Excluding blaze rods/powder, to craft an awkward potion, you need a bottle of [ ? ], and a [ ? ]
+answers:
+"water and nether wart"
+
+24:
+question: Excluding bosses, which mob has the most health?
+answers:
+"iron golem"
+
+25:
+question: True or False: You can sleep in any dimension
+answers:
+"false"
+
+26:
+question: What happens when you try to sleep in the nether or end dimension?
+answers:
+"the bed explodes"
+
+27:
+question: True or False: The wither has more health than the ender dragon
+answers:
+"true"
+
+28:
+question: How many full hearts does the wither have? (answer is between 50-200)
+answers:
+"150"
+
+29:
+question: What are the two names you can give to a mob to turn it upside down?
+answers:
+"dinnerbone, grumm"
+
+30:
+question: What is the longest lasting fuel source you can use for smelting and cooking?
+answers:
+"lava bucket"
+
+31:
+question: How many tree types are there that grow naturally in the overworld?
+answers:
+"six"
+
+32:
+question: How many seconds does a lava bucket burn for when used as fuel? (hint: answer is a simple number)
+answers:
+"1000"
+
+33:
+question: True or False: Slimes are unique in that they can be up to 256 x 256 blocks big when spawned with a custom NBT tag
+answers:
+"true"
+
+34:
+question: What mob is hidden in the 'MINECRAFT' logo?
+answers:
+"creeper"
+
+35:
+question: What are the dimensions of a chunk? (W x L x H)
+answers:
+"16x16x256"
+
+36:
+question: say True or False: Minecraft''s moon has the same amount of lunar phases as the moon in real life
+answers:
+"true"
+
+37:
+question: True or False: Spiders attack in daylight
+answers:
+"false"
+
+38:
+question: True or False: There are six kinds of flora that are 2 blocks high
+answers:
+"false"
+
+39:
+question: True or False: Under the pumpkin, snowmen are happy :D
+answers:
+"true"
+
+40:
+question: How many kinds of sandstone patterns are there? (only whole blocks)
+answers:
+"three"
+
+41:
+question: The maximum build height is Y level [ ? ]
+answers:
+"255"
+
+42:
+question: Where did Minecraft originate from?
+answers:
+"sweden"
+
+43:
+question: Which two bow enchantments cannot be on the same bow?
+answers:
+"infinity and mending"
+
+44:
+question: How many types of blocks are affected by gravity? (as of 1.16.4)
+answers:
+"five"
+
+45:
+question: Who composed the original Minecraft soundtrack?
+answers:
+"C418"
+
+46:
+question: Roughly how long does it take to mine obsidian with an unenchanted diamond pickaxe?
+answers:
+"10 seconds"
+
+47:
+question: say How many gold/iron/diamonds do you need to craft a full set of armor?
+answers:
+"24"
+
+48:
+question: What Minecraft version was the ender dragon added?
+answers:
+"1.0"
+
+49:
+question: say How many flowers are in the game as say of 1.16.4? (bushes only count if they have flowers)
+answers:
+"17"
+
+50:
+question: What are the two places slimes spawn? ([ ? ] and [ ? ])
+answers:
+"swamps and slime chunks"
+
+51:
+question: What was the first modpack hosted by SiriusMC?
+answers:
+"tekkit legends"
+
+52:
+question: True or False: It is allowed to steal from claimed land
+answers:
+"false"
+
+53:
+question: True or False: Anti-afk machines are allowed?
+answers:
+"false"
+
+54:
+question: What items do not burn in lava?
+answers:
+"netherite"
+
+55:
+question: What is the highest achievable playtime rank?
+answers:
+"titan"
+
+56:
+question: What rank do you reach after 20 hours of playtime?
+answers:
+"seasoned"
+
+57:
+question: What is the original name of SiriusMC?
+answers:
+"cosmic"
